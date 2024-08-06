@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pybov"
+version = "0.0.1"
+description = "python library to parse b3/ibov market data"
+authors = ["odra <me@lrossetti.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.1"
+pytest = "^8.3.2"
+pytest-sugar = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
