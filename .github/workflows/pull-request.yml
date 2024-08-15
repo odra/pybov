@@ -20,5 +20,7 @@ jobs:
     - uses: abatilo/actions-poetry@v2
     - name: Install dependencies
       run: poetry install
+      working-directory: pybov
     - name: Test with pytest using poetry
       run: make poetry/test
+      working-directory: pybov
