@@ -1,6 +1,9 @@
 """
 Module to host error classes and utilities.
 """
+from typing import Dict
+
+
 class PybovError(Exception):
     """
     Base exception to be eithe risen or inherited by
@@ -32,3 +35,20 @@ class PybovError(Exception):
         for testing/debugging purposes.
         """
         return f'[{self.code}] {self.message}'
+
+
+class PybovValidationError(PybovError):
+    """
+    Represents a data validation error.
+    """
+    data: Dict[str, str]
+
+    def __init__(self, message: str, **kwargs: str) -> None:
+        """
+        Create a new validation error instance, taking a message error and 
+        using `kwargs` (a dictionary of strings)  as the validation fields/data
+        that failed.
+        """
+        super().__init__(message)
+        
+        self.data = kwargs
