@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pybov"
+version = "0.1.0"
+description = "me"
+authors = ["Leonardo Rossetti <me@lrossetti.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.19.0"
+pytest = "^9.0.1"
+pytest-sugar = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
